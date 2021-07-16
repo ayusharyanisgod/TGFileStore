@@ -51,8 +51,8 @@ async def start(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/DevsZone"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
+                        InlineKeyboardButton("Updates Channel ⬆️", url="http://t.me/PremiumValleyUpdates"),
+                        InlineKeyboardButton("Support Group 🆘", url="http://t.me/PremiumValleySupport")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -99,7 +99,7 @@ async def main(bot: Client, message: Message):
                 pass
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group](https://t.me/DevsZone)",
+            await message.reply_text("Sorry, You are banned!\n\nContact [Support Group 🆘](http://t.me/PremiumValleySupport)",
                                      disable_web_page_preview=True)
             return
 
@@ -119,8 +119,8 @@ async def main(bot: Client, message: Message):
                 parse_mode="Markdown",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("Open Link", url=share_link)],
-                     [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates"),
-                      InlineKeyboardButton("Support Group", url="https://t.me/DevsZone")]]
+                     [InlineKeyboardButton("Updates Channel ⬆️", url="http://t.me/PremiumValleyUpdates"),
+                      InlineKeyboardButton("Support Group 🆘", url="http://t.me/PremiumValleySupport")]]
                 ),
                 disable_web_page_preview=True
             )
